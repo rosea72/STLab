@@ -448,6 +448,10 @@
         const saved = localStorage.getItem('stl_user');
         if (saved && state.usersData[saved]) {
             login(saved);
+        } else {
+            // Show onboarding screen if no user is logged in
+            document.getElementById('onboarding').classList.remove('hidden');
+            document.getElementById('app').classList.add('hidden');
         }
     </script>
 </body>
